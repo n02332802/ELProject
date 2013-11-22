@@ -14,10 +14,10 @@ RPi project - Create a responsive website with temperature data using Node.js, a
 **2.**
 - Built and installed MongoDB. It took ~9 hours total!
 	- http://mongopi.wordpress.com/2012/11/25/installation/
-- Created a database to test MongoDB. Had to make sure to run 'mongod' in the background.
+- Created a database to test MongoDB. If not using desktop, had to make sure to run 'mongod' in the background.
 	
 **2a.** 
--Installed mongoose to connect  MongoDB to Node.js.
+- Installed mongoose to connect  MongoDB to Node.js.
 	- http://mongoosejs.com/docs/index.html
 	- http://mongoosejs.com/docs/guide.html
 	- http://mongoosejs.com/docs/models.html
@@ -34,7 +34,7 @@ RPi project - Create a responsive website with temperature data using Node.js, a
    - https://github.com/WebReflection/dblite/
    
 **4.** 
-- Used zetcode.com/db/sqlite/ documentation to create a database from a .csv file.
+- Used http://zetcode.com/db/sqlite/ documentation to create a database from a .csv file.
 - Had to delete the title line.
    
 **5.** 
@@ -42,10 +42,10 @@ RPi project - Create a responsive website with temperature data using Node.js, a
 	- Used https://npmjs.org/package/node-highcharts to start.
 - Currently using http://www.highcharts.com/docs/working-with-data/preprocessing-live-data to figure out how to graph live data.
    
-**CODE:** 
+**THE CODE:** 
 - Start server using command 'node index.js'. index.js sets up handles and starts the server 
 located in server.js. 
-- server.js recieves the router module and the handle array as parameters and 
+- server.js receives the router module and the handle array as parameters and 
 uses them to parse the URL and use the correct function in requestHandler.js. 
 - The printDB function
 in requestHandler.js creates a table, deletes anything in it, enters the .csv's data into it and then
