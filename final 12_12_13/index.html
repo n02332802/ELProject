@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+	function showTable()
+        {
+	    var beg = document.getElementById('tableDiv');
+	    if(beg.style.display=='block')
+	    {
+		beg.style.display='none';
+	    }
+	    else
+	    {
+		server();
+		beg.style.display='block';
+	    }
+	}
+	function server()
+	{
+	    xmlhttp = new XMLHttpRequest();
+	    xmlhttp.open("GET","http://localhost:8888/", true);
+	    xmlhttp.onreadystatechange=function()
+	    {
+		if(xmlhttp.readyState==4 && xmlhttp.status==200)
+		{
+		    document.getElementByID("tableDiv").innerHTML = xmlhttp.responseText;
+		}
+	    } 
+	    xmlhttp.send();
+	}
+    </script>
+    <link type="text/css" rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <button onclick="showTable()">Toggle Table</button>
+    <div id="tableDiv">a div</div>
+</body>
+</html>

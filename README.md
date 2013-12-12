@@ -41,7 +41,10 @@ RPi project - Create a responsive website with temperature data using Node.js, a
 - Used	'npm install node-highcharts' to install the node module for highcharts.
 	- Used https://npmjs.org/package/node-highcharts to start.
 - Currently using http://www.highcharts.com/docs/working-with-data/preprocessing-live-data to figure out how to graph live data.
-   
+**6.**
+- Actually used Quiche for Google Chart API. 'npm install quiche'
+- Simple to use. 
+  
 **THE CODE:** 
 - Start server using command 'node index.js'. index.js sets up handles and starts the server 
 located in server.js. 
@@ -50,4 +53,8 @@ uses them to parse the URL and use the correct function in requestHandler.js.
 - The printDB function
 in requestHandler.js creates a table, deletes anything in it, enters the .csv's data into it and then
 prints the contents of the database out in a table. 
-- Currently working towards a live graph.
+
+**Current State**
+- Table is output as well as a graph. 
+- Tried making the table and graph live, but then the page does not load until the response ends so it looks as though the page takes a really long time to load.
+- Tried using HTML/CSS with ajax but could not connect to node server.
